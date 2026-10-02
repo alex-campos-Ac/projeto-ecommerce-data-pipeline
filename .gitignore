@@ -1,0 +1,14 @@
+# Arquivos de dados
+*.csv
+*.xlsx
+*.json
+
+# Ambientes virtuais e Python
+venv/
+.venv/
+__pycache__/
+.env
+
+# Configurações de IDE
+.vscode/
+.idea/
