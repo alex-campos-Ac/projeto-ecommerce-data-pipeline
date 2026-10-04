@@ -28,3 +28,23 @@ FROM fato_pedidos ped
 INNER JOIN fato_pagamentos pag ON ped.pedido_id = pag.pedido_id
 WHERE pag.status_pagamento = 'APROVADO' 
   AND ped.status_pedido = 'PENDENTE';
+
+
+  -- View consolidada de vendas, incluindo informações de pedidos, produtos e pagamentos
+  USE db_ecommerce;
+GO
+
+CREATE VIEW vw_vendas_consolidadas AS
+SELECT 
+    ped.pedido_id,
+    ped.data_pedido,
+    ped.status_pedido,
+    prod.nome AS produto_nome,
+    ped.quantidade,
+    prod.preco_unitario,
+    pag.status_pagamento,
+    pag.valor_receita
+FROM fato_pedidos ped
+INNER JOIN dim_produtos prod ON ped.produto_id = prod.produto_id
+LEFT JOIN fato_pagamentos pag ON ped.pedido_id = pag.pedido_id;
+GO
