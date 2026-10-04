@@ -74,3 +74,18 @@ nulos_restantes = df_pagamentos_limpo["valor_receita"].isnull().sum()
 
 print("\n--- TRATAMENTO DE NULOS CONCLUÍDO ---")
 print(f"Valores nulos restantes na receita: {nulos_restantes}")
+
+
+# Criar a pasta 'data/saneados' se ela não existir
+pasta_saneados = os.path.join(pasta_data, "saneados")
+os.makedirs(pasta_saneados, exist_ok=True)
+
+# Salvar os arquivos CSV saneados
+df_pedidos.to_csv(
+    os.path.join(pasta_saneados, "fato_pedidos_limpo.csv"), index=False
+)
+df_pagamentos_limpo.to_csv(
+    os.path.join(pasta_saneados, "fato_pagamentos_limpo.csv"), index=False
+)
+
+print(f"\n--- ARQUIVOS SANEADOS SALVOS EM: {pasta_saneados} ---")
