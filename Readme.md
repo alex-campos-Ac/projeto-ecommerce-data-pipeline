@@ -1,6 +1,5 @@
 # 📊 DataCommerce — End-to-End Sales & E-Commerce Analytics Pipeline
 
-![DataCommerce Dashboard](https://raw.githubusercontent.com/placeholder/datacommerce-dashboard.png)
 
 ## 📌 Visão Geral do Projeto
 
@@ -83,4 +82,4 @@ A análise dos dados consolidados no dashboard revelou três achados estratégic
 ## ✒️ Autor
 
 Desenvolvido por **Seu Nome**  
-* [LinkedIn](https://linkedin.com/in/seu-perfil) | [GitHub](https://github.com/seu-usuario)
+* [LinkedIn](https://www.linkedin.com/in/alex-campos-44bb01349/?isSelfProfile=true) | [POWER BI](https://app.powerbi.com/groups/me/reports/47ffb2bf-9ede-4c59-878b-50a2af44da8a/b63295480456a00c288b?experience=power-bi)
